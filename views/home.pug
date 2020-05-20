@@ -1,0 +1,19 @@
+doctype html
+head
+  title How to use lowdb
+  meta(charset='UTF-8')
+  meta(name='viewport', content='width=device-width, initial-scale=1')
+  style 
+    include partials/style.css
+.container
+  h1.title Danh s&aacute;ch h&#x1ECD;c vi&ecirc;n:
+  form(action='/hocvien/search' method='GET')
+    label(for='fullname') H&#x1ECD; v&agrave; t&ecirc;n: 
+    input(type='text', name='fullname')
+    button Search
+    a(href="/hocvien/create") Create new
+    br
+    br
+  each hv in dshv
+    li='id: ' + hv.id
+        a(href='/hocvien/'+ hv.id) View details
