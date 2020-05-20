@@ -1,0 +1,73 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 62.5%;
+    color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container{
+
+    width: 100%;
+    max-width: 1200px;
+    height: 500px;
+    background-color: bisque;
+    margin: 0 auto;
+    padding: 30px;
+    font-size: 1.6rem;
+    overflow: auto;
+}
+.container input{
+    padding: 5px 10px;
+    outline: none;
+    border: 1px solid #ccc;
+}
+.container button{
+    background-color: aquamarine;
+    font-weight: bold;
+    padding: 5px 10px;
+    border: 1px solid aquamarine;
+    box-shadow: 5px 5px #ccc;
+    outline: none;
+    cursor: pointer;
+}
+.container a{
+    background-color: rgb(31, 176, 238);
+    font-weight: bold;
+    color: #fff;
+    outline: none;
+    cursor: pointer;
+    text-decoration: none;
+    margin-left: 10px;
+    padding: 4px;
+    border: 1px solid rgb(31, 176, 238);
+    border-radius: 5px;
+    line-height: 2.8rem;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+}
+.container a:hover{
+    background-color: rgb(6, 117, 165);
+    
+}
+.container li{
+    padding: 10px 10px;
+    list-style: none;
+    background-color: #fff;
+    margin-bottom: 10px;
+}
+.arlet{
+    padding: 5px;
+    color: rgb(212, 112, 112);
+    background-color: #fff;
+    font-weight: lighter;
+}

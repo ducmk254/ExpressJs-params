@@ -8,6 +8,7 @@ module.exports.index =(req,res)=>{
 };
 
 module.exports.create = (req,res)=>{
+    console.log(req.cookies);
     res.render('create');
 };
 
@@ -22,17 +23,22 @@ module.exports.viewbyid = (req,res)=>{
     let id = req.params.id;
     let dshvTemp =[];
     dshvTemp.push(db.get('dshv').find({id:id}).value());
-    console.log(dshvTemp);
     res.render('viewbyid',{dshv:dshvTemp});
 };
 
+
+
+// Post method:
+
 module.exports.postCreate = (req,res)=>{
     req.body.id = shortid.generate();
-    if(req.body.fullname !== '') {
+    let errors=[];
+    if(req.body.fullname !=='') {
         dshv = db.get('dshv').push(req.body).value();
         db.write();
         res.redirect('/hocvien');
     }else{
+        errors.push('Name is required');
         res.render('noinput');
     }
     
