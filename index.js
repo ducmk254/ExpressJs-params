@@ -19,7 +19,7 @@ app.set('views','./views');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static('public')); // khai báo rằng các file static được lưu trong thư mục public, có thể láy ra để sử dụng dạng link
-app.use(cookieParser());
+app.use(cookieParser('abcdef'));
 
 
 

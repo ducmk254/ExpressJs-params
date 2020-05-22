@@ -1,5 +1,5 @@
 var db = require('../db');
-
+var md5 = require('md5');
 
 module.exports.login = (req,res)=>{
     res.render('auth/login');
@@ -16,13 +16,17 @@ module.exports.postLogin = (req,res)=>{
         });
         return;
     }
-    if(user.password !== password){
+    if(user.password !== md5(password)){
         res.render('auth/login',{
             errors: ['Wrong password'],
             values: req.body
          });
          return;
     }
-    res.cookie('userId',user.id);
+
+    
+    res.cookie('userId',user.id,{
+        signed: true
+    });
     res.redirect('/hocvien');
 };

@@ -6,4 +6,6 @@ head
   link(rel="stylesheet", href="../css/style.css")
   link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css")
 body
+    if user 
+      p(class='display-4 text-right')= user.fullname
     block content
