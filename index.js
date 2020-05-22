@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 var bodyParser = require('body-parser');
 const shortid = require('shortid');
@@ -19,7 +20,7 @@ app.set('views','./views');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static('public')); // khai báo rằng các file static được lưu trong thư mục public, có thể láy ra để sử dụng dạng link
-app.use(cookieParser('abcdef'));
+app.use(cookieParser(process.env.SESSION_SECRET));
 
 
 
