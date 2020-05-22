@@ -1,0 +1,23 @@
+doctype html
+head
+  title How to use lowdb
+  meta(charset='UTF-8')
+  meta(name='viewport', content='width=device-width, initial-scale=1')
+  link(rel="stylesheet", href="../css/style.css")
+  link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css")
+body
+    .container
+
+        h1.title Login
+        if errors 
+            each err in errors
+                .arlet.arlet-danger= err
+
+        form(method='POST')
+            .form-group 
+                label(for="email") Email
+                input#email.form-control(name="email",type="text", value=values ? values.email : "")
+            .form-group 
+                label(for="password") Password
+                input#password.form-control(name="password",type="password",value=values ? values.password : "")
+            button.btn.btn-primary Login

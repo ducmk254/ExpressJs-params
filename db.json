@@ -50,7 +50,9 @@
     },
     {
       "fullname": "Kim Thị Diệu Thu",
-      "id": "OuB5VvUZy"
+      "id": "OuB5VvUZy",
+      "email": "dieuthu@gmail.com",
+      "password": "123456"
     }
   ]
 }

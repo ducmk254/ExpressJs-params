@@ -8,7 +8,6 @@ module.exports.index =(req,res)=>{
 };
 
 module.exports.create = (req,res)=>{
-    console.log(req.cookies);
     res.render('create');
 };
 
@@ -25,6 +24,7 @@ module.exports.viewbyid = (req,res)=>{
     dshvTemp.push(db.get('dshv').find({id:id}).value());
     res.render('viewbyid',{dshv:dshvTemp});
 };
+
 
 
 

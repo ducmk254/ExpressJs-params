@@ -3,7 +3,7 @@ var express = require('express');
 
 
 var controller = require('../controllers/hocvien.controller');
-
+var authMiddleware = require('../middleware/auth.middleware');
 
 var router = express.Router();
 
