@@ -7,11 +7,12 @@ var cookieParser = require('cookie-parser');
 
 const db = require('./db');
 const hvRouter = require('./routers/hocvien.router');
-const authRouter =require('./routers/auth.router');
+const authRouter = require('./routers/auth.router');
+const productRouter = require('./routers/products.router')
 const middleware = require('./middleware/auth.middleware');
 
 const app = express();
-const port = 3000;
+const port = 3001;
 
 
 
@@ -32,6 +33,7 @@ app.get('/',(req,res)=>{
 
 app.use('/hocvien',middleware.requireAuth,hvRouter); // protect /hocvien phải login trước
 app.use('/auth',authRouter);
+app.use('/products',productRouter);
 
 
 

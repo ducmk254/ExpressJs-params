@@ -13,6 +13,6 @@ module.exports.requireAuth = (req,res,next)=>{
         return;
     }
 
-    res.locals.user = user;
+    res.locals.user = user; 
     next();
 };

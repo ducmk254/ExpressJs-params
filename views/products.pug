@@ -1,0 +1,66 @@
+extends ../layouts/common.pug
+block content
+    .container.product__search
+        form.product__form(action='')
+            input.product__input(type='text')
+            a.product__col-link.product__search-btn(href='#') Search
+    
+    if products
+        .product__row.container
+            each product,key in products
+                if key < 4
+                    .product__col
+                        img.product__col-img(src=product.img, alt='product')
+                        span.product__col-title=product.name
+                        p.product__col-descript=product.description
+                        a.product__col-link(href='/product/'+ product.id) Add to cart
+    if products
+        .product__row.container
+            each product,key in products
+                if key > 3
+                    .product__col
+                        img.product__col-img(src=product.img, alt='product')
+                        span.product__col-title=product.name
+                        p.product__col-descript=product.description
+                        a.product__col-link(href='/product/'+ product.id) Add to cart
+    nav(aria-label='product__row Page navigation example pagination')
+        ul.pagination
+            case page
+                when 1
+                    li.page-item
+                        a.page-link(href='/products') Previous
+                    li.page-item.disable
+                        a.page-link(href='/products?page='+page)=page
+                    li.page-item
+                        a.page-link(href='/products?page='+ pageplus)=pageplus
+                    li.page-item
+                        a.page-link(href='/products?page='+ pageplusplus)=pageplusplus
+                    li.page-item
+                        a.page-link(href='/products?page='+ maxPage) Next
+                when 13
+                    li.page-item
+                        a.page-link(href='/products?page=') Previous
+                    li.page-item
+                        a.page-link(href='/products?page=' + pagemimi)=pagemimi
+                    li.page-item
+                        a.page-link(href='/products?page=' + pagemi)=pagemi
+                    li.page-item.disable
+                        a.page-link(href='/products?page=' + page)=page
+                    li.page-item
+                        a.page-link(href='/products?page=' + maxPage) Next
+                default
+                    li.page-item
+                        a.page-link(href='/products?page=') Previous
+                    li.page-item
+                        a.page-link(href='/products?page='+ pagemi)=pagemi
+                    li.page-item.disable
+                        a.page-link(href='/products?page='+ page)=page
+                    li.page-item
+                        a.page-link(href='/products?page='+ pageplus)=pageplus
+                    li.page-item
+                        a.page-link(href='/products?page='+ maxPage) Next
+
+
+
+            
+        
