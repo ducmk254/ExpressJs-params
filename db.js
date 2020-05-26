@@ -3,7 +3,7 @@ const FileSync = require('lowdb/adapters/FileSync');
 
 const adapter = new FileSync('db.json');
 const db = low(adapter);
-db.defaults({ dshv: [{id:'',fullname:''}] })
+db.defaults({ dshv: [{id:'',fullname:''}],SESSIONS:[] })
   .write();
 
 

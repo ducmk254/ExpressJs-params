@@ -53,6 +53,15 @@
       "id": "OuB5VvUZy",
       "email": "dieuthu@gmail.com",
       "password": "e10adc3949ba59abbe56e057f20f883e"
+    },
+    {
+      "fullname": "Thu Hien",
+      "id": "jq5oZhsTY"
+    },
+    {
+      "fullname": "Bui Van Khoat",
+      "avantar": "hoa-sn.jpg",
+      "id": "3yk3Bk1V0"
     }
   ],
   "products": [
@@ -655,6 +664,26 @@
       "name": "Basil - Thai",
       "img": "https://picsum.photos/seed/picsum/200/130",
       "description": "rutrum rutrum neque aenean auctor gravida sem praesent id massa id nisl venenatis lacinia aenean sit amet justo morbi ut"
+    }
+  ],
+  "SESSIONS": [
+    {
+      "SESSIONID": "PHApAlK3n",
+      "cart": {
+        "ccf83172-bd46-4446-8f74-f67d9ee000c7": 1,
+        "8f7d1f03-4717-4613-837a-9d0f17bf0186": 1
+      }
+    },
+    {
+      "SESSIONID": "L8KRxI3YB",
+      "cart": {
+        "ccf83172-bd46-4446-8f74-f67d9ee000c7": 1,
+        "4c5350db-3013-4992-886d-47d07c7c2e1b": 1,
+        "f2a484c7-21a6-401b-bcea-6b7550d86dfe": 4,
+        "9541579f-44ef-402a-bee5-f9f78833417c": 1,
+        "c2908d24-9a2a-4417-82db-6efe52ffab2b": 1,
+        "b108d342-7c4c-4ff0-bc8b-0c4d9ecfdcb7": 1
+      }
     }
   ]
 }

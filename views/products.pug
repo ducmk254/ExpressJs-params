@@ -13,7 +13,7 @@ block content
                         img.product__col-img(src=product.img, alt='product')
                         span.product__col-title=product.name
                         p.product__col-descript=product.description
-                        a.product__col-link(href='/product/'+ product.id) Add to cart
+                        a.product__col-link(href='/cart/add/'+ product.id) Add to cart
     if products
         .product__row.container
             each product,key in products
@@ -22,7 +22,7 @@ block content
                         img.product__col-img(src=product.img, alt='product')
                         span.product__col-title=product.name
                         p.product__col-descript=product.description
-                        a.product__col-link(href='/product/'+ product.id) Add to cart
+                        a.product__col-link(href='/cart/add/'+ product.id) Add to cart
     nav(aria-label='product__row Page navigation example pagination')
         ul.pagination
             case page
@@ -36,10 +36,10 @@ block content
                     li.page-item
                         a.page-link(href='/products?page='+ pageplusplus)=pageplusplus
                     li.page-item
-                        a.page-link(href='/products?page='+ maxPage) Next
+                        a.page-link(href='/products?page='+maxPage) Next
                 when maxPage
                     li.page-item
-                        a.page-link(href='/products?page=') Previous
+                        a.page-link(href='/products?page=' + 1) Previous
                     li.page-item
                         a.page-link(href='/products?page=' + pagemimi)=pagemimi
                     li.page-item
@@ -50,7 +50,7 @@ block content
                         a.page-link(href='/products?page=' + maxPage) Next
                 default
                     li.page-item
-                        a.page-link(href='/products?page=') Previous
+                        a.page-link(href='/products?page='+ 1) Previous
                     li.page-item
                         a.page-link(href='/products?page='+ pagemi)=pagemi
                     li.page-item.disable
