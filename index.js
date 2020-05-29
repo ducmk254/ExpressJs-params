@@ -5,6 +5,7 @@ const shortid = require('shortid');
 const pug = require('pug');
 var cookieParser = require('cookie-parser');
 const multer = require('multer'); //support enctype=multip/form-data
+const mongoose = require('mongoose');
 
 const db = require('./db');
 const hvRouter = require('./routers/hocvien.router');
@@ -13,6 +14,7 @@ const productRouter = require('./routers/products.router')
 const middleware = require('./middleware/auth.middleware');
 const sessionMiddleware = require('./middleware/session.middleware');
 const cartRouter = require('./routers/cart.router');
+mongoose.connect(process.env.MONGO_URL);
 
 const app = express();
 const port = 3001;
