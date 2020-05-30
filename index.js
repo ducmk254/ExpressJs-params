@@ -19,7 +19,7 @@ mongoose.connect(process.env.MONGO_URL);
 const apiProductRoute = require('./api/routers/product.router');
 
 const app = express();
-const port = 3001;
+const port = process.env.PORT;
 
 
 
