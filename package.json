@@ -18,7 +18,8 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": "nodemon index.js -e js,pug,css --inspect",
+    "dev": "nodemon index.js -e js,pug,css --inspect",
+    "start": "node index.js -e js,pug,css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
