@@ -16,6 +16,8 @@ const sessionMiddleware = require('./middleware/session.middleware');
 const cartRouter = require('./routers/cart.router');
 mongoose.connect(process.env.MONGO_URL);
 
+const apiProductRoute = require('./api/routers/product.router');
+
 const app = express();
 const port = 3001;
 
@@ -28,6 +30,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static('public')); // khai báo rằng các file static được lưu trong thư mục public, có thể láy ra để sử dụng dạng link
 app.use(cookieParser(process.env.SESSION_SECRET));
 app.use(sessionMiddleware); // áp dụng cho tất cả các router 
+app.use('/api',apiProductRoute);
 
 
 
